@@ -3,8 +3,9 @@ Reading material and general ideas
 
 
 
-# Graphics
-
+# World generation
+ - https://experilous.com/1/blog/post/procedural-planet-generation
+ - http://codeflow.org/entries/2010/dec/09/minecraft-like-rendering-experiments-in-opengl-4/
 
 # L-systems
 - http://procworld.blogspot.se/2011/02/recombining-rules.html
