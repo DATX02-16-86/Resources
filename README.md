@@ -18,3 +18,7 @@ Reading material and general ideas
 
 # Voxel rendering
  - http://www.oocities.org/tzukkers/isosurf/isosurfaces.html
+
+
+# Other
+- http://www.voxelquest.com/news/how-does-it-work
