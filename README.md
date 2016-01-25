@@ -18,6 +18,8 @@ Reading material and general ideas
 
 # Voxel rendering
  - http://www.oocities.org/tzukkers/isosurf/isosurfaces.html
+ - http://www.frankpetterson.com/publications/dualcontour/dualcontour.pdf
+ - http://upvoid.com/devblog/2013/05/terrain-engine-part-1-dual-contouring/
 
 
 # Other
