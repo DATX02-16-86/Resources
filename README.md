@@ -13,6 +13,7 @@ Reading material and general ideas
 - http://procworld.blogspot.se/2011/02/space-colonization.html
 - http://procworld.blogspot.se/2011/03/little-blue-house-in-prairie.html
 - http://procworld.blogspot.se/2011/03/writing-architecture.html
+- http://www.aaweb.ch/2011/08/procedural-modelling-in-houdini-based-on-function-representation/
 
 # Voxel rendering
  - http://www.oocities.org/tzukkers/isosurf/isosurfaces.html
