@@ -25,3 +25,4 @@ Reading material and general ideas
 # Other
 - http://www.voxelquest.com/news/how-does-it-work
 - http://forum.unity3d.com/threads/terrainengine-voxel-terrain-smooth-cubic-2d-hexagonal-infinite-procedural-terrain.174595/
+- https://unigine.com/en/articles/procedural-content-generation2
