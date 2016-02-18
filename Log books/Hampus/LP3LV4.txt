@@ -1,0 +1,13 @@
+Log book for Bachelor Thesis
+"Generating Compelling Procedural 3D Landscapes and Environments", 2016
+DATX02-16-86
+Hampus Lidin
+
+LP3, LV4
+===============================================================================
+
+  Tuesday 2016-1-9:
+    Research on Voronoi diagrams. A Voronoi diagram divides a plane into smaller polygonals determined by pairs of points in the plane. Voronoi can be used for map generation, and one algorithm that me and Pierre found for generating the diagrams is called Fortune's algorithm. We started to look for current implementations and found some written in C++. We analysed the code in parallel to the algorithm itself to get a better understanding of the process.
+
+  Thursday 2016-1-11:
+    Me and Pierre continued with the implementation. The algorithm has a sweep line that passes through the plane and eventually the points scattered around. When the sweep line passes a point, or a site, a so called site event occurs. When a site event occurs, a parabola is created for that point. The parabola is defined as the points that are exactly as far from the site as to the sweep line. When passing the first point, the beach line is initially created. Currently it only consists of one arc. When the sweep line passes another site and a new parabola is created, the beach line will eventually merge with that parabola. When an arc in the beach line shrinks infinitely small, a circle event occurs. The arc that disappeared will have become a point, and that point is one of the corners of the resulting polygonal map. As the sweep line progresses, and more arcs appears and disappears, more points will be created for the map. When the beach line has completely disappeared, the algorithm is done.

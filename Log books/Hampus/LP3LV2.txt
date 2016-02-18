@@ -1,0 +1,52 @@
+Log book for Bachelor Thesis
+"Generating Compelling Procedural 3D Landscapes and Environments", 2016
+DATX02-16-86
+Hampus Lidin
+
+LP3, LV2
+================================================================================
+
+Wednesday 2016-1-27:
+  Read about the concept behind L-systems and learned that it is a language structure which, through simple rules, could create complex structures only after the first few iterations. For each L-system, you define variables (changes after each iteration), constants (remain the same through all iterations) and an axiom, or starting value. Each variable has at least one rule to it that occurs each iteration.
+
+  For example, say there were two variables called "X" and "Y", respectively, and two constants "[" and "]". A rule for variable "Y" could then be "Y -> YY", which means it doubles itself, and a rule for variable "X" could be "X -> Y[X]X". With starting value "X", the process would then look like this:
+
+    axiom:  X
+    1:  Y[X]X
+    2:  YY[Y[X]X]Y[X]X
+    3:  YYYY[YY[Y[X]X]Y[X]X]YY[Y[X]X]Y[X]X
+    ...
+
+  You can get a graphical representation of this structure by defining the meaning of each variable and constant. We can define the meanings as follows:
+
+    X: moving forward one unit and draw a leaf
+    Y: moving forward one unit
+    [: push the position and angle, turn left 45°
+    ]: pop the position and angle, turn right 45°
+
+  We can then get a tree structure that looks like this (in its most representative form):
+
+    axiom:
+      |
+
+    1:
+      \ /
+       |
+
+    2:
+      _|   |_
+        \ /
+         |
+         |
+    3:
+        \ /   \ /
+         |     |
+      \__|     |__/
+      /   \   /   \
+           \ /
+            |
+            |
+            |
+            |
+
+  If all variables have only one rule defined respectively, then the process is deterministic, that is the same outcome will be generated for the same start value. If, however, more than one rule is defined for a variable, then the process becomes probabilistic. Each rule would have to be distributed with some probability.

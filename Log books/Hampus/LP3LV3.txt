@@ -1,0 +1,47 @@
+Log book for Bachelor Thesis
+"Generating Compelling Procedural 3D Landscapes and Environments", 2016
+DATX02-16-86
+Hampus Lidin
+
+LP3, LV3
+================================================================================
+
+Wednesday 2016-1-3:
+  Did some research about pseudo random number generators. Seems to be fairly hard to construct a well-distributed number generator with long sequences and fast execution. Even harder was it to find a number generator that produces varied outcomes for consecutive numbers, such as coordinates to a map. One of the simplest implementations I came across was the 128-bit XOR shift algorithm, which uses two 64-bit numbers (in an array) as a seed and performs various XOR and shifting operations on them. However, it seems to work poorly for generating random numbers with map coordinates as seeds. This was apparent when I experimented with cellular automaton. Cellular automaton is a rule-based system for a grid of elements, which either are dead or alive, that changes after each iteration. Each element has to follow a rule that determines whether the element in the grid should survive or die, determined by its adjacent neighbors. The system I experimented with was a Cartesian coordinate system with the Moore- respectively Von Neumann-neighbor rules. Moore-neighbors are defined as the elements one unit adjacent, including the diagonal direction. Von Neumann-neighbors are only the up, down, left and right adjacent elements within one units reach. Depending what neighbor rule you use, you get different results. I used a mix of them both. When using Moore-neighbors, I stated that if an element has more than 5 neighbors, it will survive. If it has less then 5, then it dies. If it has exactly 5, then it stays the same. For the Von Neumann neighbors, I stated the same principle, but for 2 neighbors instead. The result I got was this:
+
+               XXX             XXXX
+             XXXXXX           XXXXXX
+           XXXXXXX           XXXXXXX
+           XXXXXX            XXXXXXX
+          XXXXXX            XXXXXXXX
+          XXXXXXX          XXXXXXXX
+          XXXXXXXX        XXXXXXXXX
+          XXXXXXXXXX     XXXXXXXXX
+          XXXXXXXXXXXXXXXXXXXXXXXX
+         XXXXXXXXXXXXXXXXXXXXXXXX
+     XXXXXXXXXXXXXXXXXXXXXXXXXXX
+    XXXXXXXXXXXXX   XXXXXXXXXX
+    XXXXXXXXXX       XXXXXXXX
+    XXXXXXXXX        XXXXXXX
+    XXXXXXXX         XXXXXX
+    XXXXXXXX           XXX
+     XXXXXXX            XX   X
+     XXXXXXX             XXXXXXX
+      XXXXXXX            XXXXXXXX
+                         XXXXXXXXX
+                         XXXXXXXXX
+                         XXXXXXXX
+            XX            XXXXXXX
+            XXX            XXXXX
+     XX    XXXXX           XXXXX
+     XXX   XXXXXX   XX     XXXXX
+    XXXXXXXXXXXXXXXXXXX   XXXXX
+    XXXXXXXXXXXXXXXXXXX  XXXXX
+    XXXXXXXXXXXXXXXXXX     X
+     XXXXXXXXXXXXXXXXX
+     XXXXXXXXXXXXXXXXX
+      XXXXXXX     XXX
+       XXXX
+
+Friday 2016-2-5:
+  Did some quick reading on pseudo random number generators and its concepts. Main difference from real random number generators is that the pseudo ones are deterministic. Also did some research on cellular automaton, which can be used for map generation.

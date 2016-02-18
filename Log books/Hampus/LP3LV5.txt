@@ -1,0 +1,13 @@
+Log book for Bachelor Thesis
+"Generating Compelling Procedural 3D Landscapes and Environments", 2016
+DATX02-16-86
+Hampus Lidin
+
+LP3, LV5
+===============================================================================
+
+Monday 2016-2-15:
+  Me and Pierre continued working on the implementation. The hard part is to understand the current implementation that we base our solution on, and thus makes it harder to look for bugs in the code.
+
+Thursday 2016-2-18:
+  I continued to try to figure out the code and started cleaning it up a bit with comments. But we later decided that it would be more reasonable to use an existing library for the actual implementation, in order to save time and focus on integrating it with our own library. 
